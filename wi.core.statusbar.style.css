@@ -19,7 +19,7 @@
     background-color: var(--wi-default-bg-color);
     border-top: var(--wi-default-border);
     box-shadow: var(--wi-default-box-shadow);
-    z-index: 999999999999999;
+    z-index: 1700000;
 }
 
 .wi-statusbar-left, .wi-statusbar-right{
