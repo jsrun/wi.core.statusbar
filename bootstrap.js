@@ -12,10 +12,16 @@
 
 "use strict";
 
-(function(){
-    webide.statusbar = {
-        addRight: function(item){
-            $(".wi-statusbar-right").append($(item));
-        }
-    };    
-})();
+let TemplateEngine = require("../wi.core.template.js");
+
+module.exports = {        
+    /**
+     * Function to generate template
+     * 
+     * @param object _this
+     * @return string
+     */
+    getTemplate: function(_this){
+        return TemplateEngine(__dirname + "/template.ejs").seti18n(_this.i18n).render();
+    }
+};

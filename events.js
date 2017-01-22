@@ -12,25 +12,10 @@
 
 "use strict";
 
-let TemplateEngine = require("../wi.core.template.js");
-
-module.exports = {    
-    /**
-     * List module assets
-     * @type object
-     */
-    assets: {
-        css: [__dirname + "/wi.core.statusbar.style.css"],
-        js: [__dirname + "/wi.core.statusbar.events.js"],
-    },
-    
-    /**
-     * Function to generate template
-     * 
-     * @param object _this
-     * @return string
-     */
-    getTemplate: function(_this){
-        return TemplateEngine(__dirname + "/wi.core.statusbar.tpl.ejs").seti18n(_this.i18n).render();
-    }
-};
+webide.module("statusbar", function(){
+    this.statusbar = {
+        addRight: function(item){
+            $(".wi-statusbar-right").append($(item));
+        }
+    };    
+});
