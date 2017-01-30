@@ -35,3 +35,8 @@
     float: right;
     text-align: right;
 }
+
+.wi-statusbar-item-right{
+    display: inline;
+    margin-left: 15px;
+}
