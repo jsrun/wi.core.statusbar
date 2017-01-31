@@ -21,7 +21,7 @@ module.exports = {
      * @param object _this
      * @return string
      */
-    getTemplate: function(_this){
-        return TemplateEngine(__dirname + "/template.ejs").seti18n(_this.i18n).render();
+    getTemplate: function(i18n){
+        return TemplateEngine(__dirname + "/template.ejs").seti18n(i18n).render();
     }
 };
