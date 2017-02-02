@@ -12,8 +12,6 @@
 
 "use strict";
 
-let TemplateEngine = require("../wi.core.template.js");
-
 module.exports = {        
     /**
      * Function to generate template
@@ -21,7 +19,7 @@ module.exports = {
      * @param object _this
      * @return string
      */
-    getTemplate: function(i18n){
-        return TemplateEngine(__dirname + "/template.ejs").seti18n(i18n).render();
+    getTemplate: function(i18n, template){
+        return new template(__dirname + "/template.ejs").seti18n(i18n).render();
     }
 };
